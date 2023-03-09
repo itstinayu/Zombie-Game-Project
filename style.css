@@ -1,0 +1,84 @@
+html {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-image: url("./img/creepy-handpicked-horror-wallpaper-smashing-magazine-art-android-iphone-hd-wallpaper-background-downloadhd-wallpapers-desktop-background-android-iphone-1080p-4k-ilr06-1080x607.jpeg");
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid #000;
+}
+#game {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: url("./img/cursor_black.png") 50 50, auto;
+}
+img {
+  height: 100px;
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+.btn-start {
+  background-color: transparent;
+  border: solid 1px white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.btn-start:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.infos {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  z-index: 10;
+  font-family: "Syne Mono", monospace;
+  color: aliceblue;
+  font-size: 24px;
+  line-height: 1rem;
+}
+.blood {
+  /* 忽略點擊事件 */
+  pointer-events: none;
+}
+.swal2-icon-content {
+  font-family: "Montserrat";
+}
+.moving {
+  animation: moving 1s infinite alternate;
+}
+@keyframes moving {
+  0% {
+    transform: translate(-100%, -50%);
+  }
+  100% {
+    transform: translate(10%, -50%);
+  }
+}
